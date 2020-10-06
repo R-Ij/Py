@@ -1,0 +1,39 @@
+<!doctype html>
+<title>FlaskBlog</title>
+
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <nav class="navbarnavbarexpandlgnavbarlightbglight">
+        <a class="navbarbrand" href="/">FlaskBlog</a>
+        <button class="navbartoggler" type="button" datatoggle="collapse" datatarget="#navbarNav" ariacontrols="navbarNav" ariaexpanded="false" arialabel="Togglenavigation">
+            <span class="navbartogglericon"></span>
+        </button>
+        <div class="collapsenavbarcollapse" id="navbarNav">
+            <ul class="navnavbarnavnavbarright">
+                <li class="navitem">
+                    <a class="navlink"></a>
+                </li>
+                <li class="navitem">
+                    <a class="navlink" href="/logout">ログアウト</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="blogbody">
+        <form action="/login" method=post>
+            <div class="formgroup"><label for="InputTitle">ユーザ名</label>
+                <input type="text" class="formcontrol" id="InputTitle" name=username>
+            </div>
+            <div class="formgroup">
+                <label for="InputPassword">パスワード</label>
+                <input type="password" class="formcontrol" id="InputPassword" name=password>
+            </div>
+            <button type="submit" class="btnbtnprimary">ログイン</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
